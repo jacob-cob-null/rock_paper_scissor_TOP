@@ -6,8 +6,6 @@ botScore = 0;
 
 //prompt user to input how many rounds
 function playRound() {
-    let playRound = parseInt(prompt("Enter how many rounds to play"))
-    return playRound
 }
 
 //returns random rock paper scissors
@@ -17,13 +15,6 @@ function randomBot() {
 }
 //returns rock paper scissors from user input
 function humanChoice () {
-    try {
-        let humanChoice = parseInt(prompt("Enter 1 for rock, 2 for paper, 3 for scissors"))
-        return choices[humanChoice-1]
-    }
-    catch(err){
-        console.log(err.message)
-    }
 
 }
 
@@ -56,27 +47,15 @@ function logic (humanChoice, randomBot) {
         botScore++
     }
 }
+//show individual scores
 function showScore() {
-    console.log(`Player: ${humanScore}, Bot: ${botScore}`)
+
 }
 function finalScore() {
-    if(humanScore == botScore) {
-        console.log("It's a tie!")
-        showScore()
-    }
-    else if (humanScore > botScore) {
-        console.log(`Winner! Player: ${humanScore}, Loser! Bot: ${botScore}`)
+
 }
-    else if (humanScore < botScore) {
-        console.log(`Winner! Bot: ${botScore}, Loser! Player: ${humanScore}`)
-}
-}
+
 
 function playGame(playRound) {
-    for (let num = 0; num < playRound; num++) {
-    logic(humanChoice(),randomBot())
-}
-}
 
-playGame(playRound())
-finalScore()
+}
