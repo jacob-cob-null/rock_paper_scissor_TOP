@@ -1,0 +1,212 @@
+:root {
+    --yellow: hsla(41, 89%, 58%, 0.836);
+    --yellow-shadow: hsl(36, 96%, 36%);
+    --background:rgb(9, 9, 19);
+    --background-light:rgb(28, 28, 46);
+    --header-font: "FrozenMemory";
+    --body-font: "Heavitas";
+    --border-radius: 2em;
+}
+
+@font-face {
+    font-family: "FrozenMemory";
+    src: url(/assets/DK\ Frozen\ Memory.otf);
+}
+@font-face {
+    font-family: "Heavitas";
+    src: url(/assets/Heavitas.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    background-color:var(--background);
+}
+.scoreboard {
+    width: 45vw;
+    height: 100px;
+    display: flex;
+    padding: 0 5em;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    gap: 3em;
+}
+.player, .bot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7em;
+    height: 100px;
+    width: 100vw;
+    background-color: rgb(252, 230, 201);
+    border-radius: var(--border-radius);
+    border: 4px solid black;
+}
+h2 {
+    font-family: var(--body-font);
+    color: var(--background)
+}
+
+/*PANEL*/
+.panel {
+    width: 60vw;
+    height: 500px;
+    background-color: var(--background-light);
+    border-radius: var(--border-radius);
+    display: flex;
+    gap: 2em;
+    padding: 2em;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.result {
+    display: flex;
+    justify-content: center;
+}
+.icon-block {
+    display: flex;
+    height: 90%;
+    width: 100%;
+    gap: 2em;
+    justify-content: space-evenly;
+}
+.icon {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+}
+.round {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+}
+.round > h2, .result > h2 {
+    font-family: var(--body-font);
+    color: white;
+}
+
+/*MODAL*/
+.modal {
+    background-color: rgb(252, 230, 201);
+    height: 300px;
+    width: 600px;
+    position: fixed;
+    top: 35%;
+    left: 35%;
+    z-index: 100;
+    display: none;
+    border-radius: 12px;
+    flex-direction: column;
+    padding: 2em;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid black;
+}
+
+.end-result {
+    flex: 3;
+}
+.modal-button {
+    border-radius: 12px !important;
+    flex: 1;
+}
+/*START MODAL*/ 
+.start-modal {
+    display: flex;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.forms > input {
+    padding: 10px;
+    font-size: 16px;
+    font-family: var(--body-font);
+    border-radius: 7px;
+    border: 4px solid black;
+}
+/*END MODAL*/
+
+/*BUTTONS*/
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+.button-82-pushable {
+    border: 4px solid black;
+    overflow: visible !important;
+    z-index: 10;
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 8px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    
+  }
+  
+  .button-82-edge {
+    border: 4px solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: hsl(36, 96%, 36%);
+  }
+
+  
+  .button-82-front {
+    border: 4px solid black;
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 50%;
+    font-size: 3rem;
+    font-family: "Heavitas";
+    color: var(--yellow-shadow);
+    background: hsl(41, 89%, 58%);
+    will-change: transform;
+    transform: translateY(-17px);
+    transition:
+      transform
+      600ms
+      cubic-bezier(.3, .7, .4, 1);
+  }
+  
+  
+  .button-82-pushable:hover .button-82-front {
+    filter: brightness(110%);
+  }
+  
+  .button-82-pushable:active .button-82-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }

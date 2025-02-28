@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER SCISSORS</title>
+
+    <link rel="stylesheet" href="gameStyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="scoreboard">
+            <div class="player">
+                <h2>Your score</h2>
+                <h2 id="player-score" class="player-score">0</h2>
+            </div>
+            <div class="bot">
+                <h2>Bot score</h2>
+                <h2 id = "bot-score" class="bot-score">0</h2>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="result">
+                <h2 id = "result-text" class="result-text">WHO WON</h2>
+            </div>
+            <div class="icon-block">
+                <div class="icon player-img">
+                    <h1 id = "icon-text-player" class="icon-text player-img"></h1>
+                </div>
+                <div class="icon bot-img">
+                    <h1 id = "icon-text-bot" class="icon-text bot-img"></h1>
+                </div>
+            </div>
+            <div class="round">
+                <h2 id="round-summary" class="round-summary">ROUND RESULT</h2>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id ="rock-button" class="button-82-pushable rock-button">
+                <span class="button-82-edge"></span>
+                <span class="button-82-front text">✊</span>
+            </button>
+            <button id ="paper-button" class="button-82-pushable paper-button">
+                <span class="button-82-edge"></span>
+                <span class="button-82-front text">✋</span>
+            </button>
+            <button id ="scissors-button" class="button-82-pushable scissors-button">
+                <span class="button-82-edge"></span>
+                <span class="button-82-front text">✌️</span>
+            </button>
+        </div>
+    </div>
+    <div id="start-modal" class="modal start-modal">
+        <h2 id="end-result" class="end-result">Enter maximum score!</h2>
+        <form id="forms" class="forms">
+            <input class="input" type="number" id="maxScore" placeholder="Enter a number">
+            <button type="submit" id ="modal-button-start" class="button-82-pushable modal-button">
+                <span class="button-82-edge modal-button"></span>
+                <span class="button-82-front text modal-button">Ok!</span>
+            </button>
+        </form>
+    </div>
+    <div id="end-modal" class="modal end-modal">
+        <h2 id="modal-end-result" class="end-result"></h2>
+        <button id ="modal-button-end" class="button-82-pushable modal-button">
+            <span class="button-82-edge modal-button"></span>
+            <span class="button-82-front text modal-button">Play again?</span>
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
