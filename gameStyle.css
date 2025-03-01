@@ -182,7 +182,7 @@ h2 {
     padding: 12px 27px;
     border-radius: 50%;
     font-size: 3rem;
-    font-family: "Heavitas";
+    font-family: var(--body-font);
     color: var(--yellow-shadow);
     background: hsl(41, 89%, 58%);
     will-change: transform;
