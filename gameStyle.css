@@ -3,18 +3,10 @@
     --yellow-shadow: hsl(36, 96%, 36%);
     --background:rgb(9, 9, 19);
     --background-light:rgb(28, 28, 46);
-    --header-font: "FrozenMemory";
-    --body-font: "Heavitas";
+    --yellow-light:rgb(255, 220, 174);
+    --header-font: "Silkscreen";
+    --body-font: "Silkscreen";
     --border-radius: 2em;
-}
-
-@font-face {
-    font-family: "FrozenMemory";
-    src: url(/assets/DK\ Frozen\ Memory.otf);
-}
-@font-face {
-    font-family: "Heavitas";
-    src: url(/assets/Heavitas.ttf);
 }
 
 * {
@@ -52,7 +44,7 @@
     padding: 0.7em;
     height: 100px;
     width: 100vw;
-    background-color: rgb(252, 230, 201);
+    background-color: var(--yellow-light);
     border-radius: var(--border-radius);
     border: 4px solid black;
 }
@@ -107,7 +99,7 @@ h2 {
 
 /*MODAL*/
 .modal {
-    background-color: rgb(252, 230, 201);
+    background-color: var(--yellow-light);
     height: 300px;
     width: 600px;
     position: fixed;

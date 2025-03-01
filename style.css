@@ -2,18 +2,10 @@
     --yellow: hsl(41, 89%, 58%);
     --yellow-shadow: hsl(36, 96%, 36%);
     --background:rgb(9, 9, 19);
-    --header-font: "FrozenMemory";
-    --body-font: "Heavitas";
+    --header-font: "Silkscreen";
+    --body-font: "Silkscreen";
 }
 
-@font-face {
-    font-family: "FrozenMemory";
-    src: url(/assets/DK\ Frozen\ Memory.otf);
-}
-@font-face {
-    font-family: "Heavitas";
-    src: url(/assets/Heavitas.ttf);
-}
 
 * {
     margin: 0;
@@ -41,7 +33,7 @@
 h1 {
     font-family: var(--header-font);
     color: var(--yellow);
-    font-size: 10em;
+    font-size: 6em;
     text-shadow: 0 2px 5px black ;
 }
 .rock {
