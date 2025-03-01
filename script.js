@@ -28,6 +28,14 @@ let maxScore;
 let options = ["rock", "paper", "scissors"];
 let botChoiceIcon = ["✊", "✋", "✌️"];
 
+//bg audio
+const bgAudio = new Audio('game-audio.mp3');
+bgAudio.loop = true;
+bgAudio.play();
+
+//button click sound
+const btnClick = new Audio('button-click.mp3');
+
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     let inputValue = inputNumber.value.trim();
@@ -94,6 +102,7 @@ function game(playerDecision, botDecision) {
 
 //clicking button
 btnRock.addEventListener("click", () => {
+    btnClick.play();
     playerDecision("rock");
     playerIconText.textContent = "✊";
     botDecision();
@@ -101,6 +110,7 @@ btnRock.addEventListener("click", () => {
 });
 
 btnPaper.addEventListener("click", () => {
+    btnClick.play();
     playerDecision("paper");
     playerIconText.textContent = "✋";
     botDecision();
@@ -108,6 +118,7 @@ btnPaper.addEventListener("click", () => {
 });
 
 btnScissor.addEventListener("click", () => {
+    btnClick.play();
     playerDecision("scissors");
     playerIconText.textContent = "✌️";
     botDecision();
@@ -116,6 +127,7 @@ btnScissor.addEventListener("click", () => {
 
 //end modal
 playAgain.addEventListener("click", (e) => {
+    btnClick.play();
     botScoreCount = 0;
     playerScoreCount = 0;
     playerScore.textContent = "0";
